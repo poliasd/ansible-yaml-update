@@ -1,0 +1,6 @@
+---
+
+- include: replace_vars.yml param_name="{{item.1}}" yaml_file="{{ item.0.keys()[0] }}"
+  with_subelements:
+  - "{{ services }}"
+  - params

@@ -1,0 +1,13 @@
+services:
+  - "/path/to/the/file/that/will/be/changed":
+    params:
+      - yaml1:
+          nest1:
+            nest2: True
+      - yaml1:
+          something1:
+            something2: /**
+      - yaml2:
+          nested1:
+            nested2:
+              nested3: value      

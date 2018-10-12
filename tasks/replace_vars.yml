@@ -1,0 +1,5 @@
+- name: Copy the file for updating yaml
+  copy: src=update-yaml.py dest=/tmp/ mode=644
+
+- name: Update service config file
+  shell: python /tmp/update-yaml.py "{{ yaml_file }}" "{{ param_name | to_nice_json }}"
