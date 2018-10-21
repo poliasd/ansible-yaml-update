@@ -12,10 +12,6 @@ with io.open(filename, 'r', encoding='utf8') as f:
    yaml_dict = yaml.load(f) or {}
 
 def deep_update(source, overrides):
-    """Update a nested dictionary or similar mapping.
-
-    Modify ``source`` in place.
-    """
     for key, value in overrides.iteritems():
         if isinstance(value, collections.Mapping) and value:
             returned = deep_update(source.get(key, {}), value)
